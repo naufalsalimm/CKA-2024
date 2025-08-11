@@ -41,6 +41,8 @@ k config set-context andhika --cluster=default --user=andhika
 
 k config use-context andhika
 
+---
+
 ### Observability commands
 kubectl auth can-i get pod
 kubectl auth whoami
