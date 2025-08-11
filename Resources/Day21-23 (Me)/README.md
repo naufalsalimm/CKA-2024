@@ -23,7 +23,7 @@ k apply -f csr.yaml
 
 k certificate approve andhika-csr
 
-# Role Based Access Control Kubernetes
+# Day 23 - Role Based Access Control Kubernetes
 
 nano role.yaml
 
