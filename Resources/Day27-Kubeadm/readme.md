@@ -40,7 +40,7 @@ https://kubernetes.io/docs/reference/networking/ports-and-protocols/
 
 2)  Disable Swap using the below commands
 ```bash
-swapoff -a
+sudo swapoff -a
 sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 ```
 3) Forwarding IPv4 and letting iptables see bridged traffic
