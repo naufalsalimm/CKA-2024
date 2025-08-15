@@ -152,6 +152,11 @@ curl https://raw.githubusercontent.com/projectcalico/calico/v3.28.0/manifests/cu
 kubectl apply -f custom-resources.yaml
 ```
 
+### Additional Command
+```
+sudo kubeadm reset -f
+```
+
 ### Perform the below steps on both the worker nodes
 
 - Perform steps 1-8 on both the nodes
@@ -188,6 +193,3 @@ Where ens5 is your default interface, you can confirm by running `ifconfig` on a
 `kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml`
 
 This is not the latest version of calico though(v.3.25). This deploys CNI in kube-system NS. 
-
-### Additional Command
-`sudo kubeadm reset -f`
