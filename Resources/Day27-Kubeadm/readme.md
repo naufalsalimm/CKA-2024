@@ -153,8 +153,14 @@ kubectl apply -f custom-resources.yaml
 ```
 
 ### Additional Command
-```
+``` bash
 sudo kubeadm reset -f
+```
+``` bash
+systemctl status kubelet
+```
+```bash
+sudo journalctl -u kubelet -xe
 ```
 
 ### Perform the below steps on both the worker nodes
