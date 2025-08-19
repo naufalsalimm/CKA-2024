@@ -8,6 +8,12 @@ Guide to deploy a hello world application in a pod, create a service for it and 
 docker build -t hello-world .
 ```
 
+## Login Docker
+
+``` bash
+docker login -u <username> -p <password>
+```
+
 ## Push the Docker Image to Docker Hub
 
 ```bash
