@@ -38,7 +38,7 @@ https://kubernetes.io/docs/reference/networking/ports-and-protocols/
 ### Run the below steps on the Master VM
 1) SSH into the Master EC2 server
 
-2)  Disable Swap using the below commands
+2)  Disable Swap using the below commands (Run every restart)
 ```bash
 sudo swapoff -a
 sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
