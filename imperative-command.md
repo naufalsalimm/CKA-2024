@@ -1,4 +1,4 @@
-### Membuat manifest Kubernetes langsung dari shell
+# Membuat manifest Kubernetes langsung dari shell
 ```bash
 cat << EOF | kubectl apply -f -
 <isi yaml manifest>
@@ -16,4 +16,9 @@ spec:
   - name: nginx
     image: nginx:1.25
 EOF
+```
+
+# Menghilangkan taint di node control-plane
+``` bash
+kubectl taint nodes --all node-role.kubernetes.io/control-plane-
 ```
