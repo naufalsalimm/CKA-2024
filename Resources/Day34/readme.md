@@ -38,7 +38,7 @@ sudo apt-cache madison kubeadm
   
 ```
 sudo apt-mark unhold kubeadm && \
-sudo apt-get update && sudo apt-get install -y kubeadm='1.30.2-1.1’ && \
+sudo apt-get update && sudo apt-get install -y kubeadm='1.30.2-1.1' && \
 sudo apt-mark hold kubeadm
 ```
 
