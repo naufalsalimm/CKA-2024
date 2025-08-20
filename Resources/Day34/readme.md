@@ -49,7 +49,7 @@ sudo apt-mark hold kubeadm
 
 
 - Upgrade the system components using the below command
-`sudo kubeadm upgrade apply vX.XX.0`
+`sudo kubeadm upgrade apply vX.XX.X`
 
 - k get nodes (shows kubelet version)
 
