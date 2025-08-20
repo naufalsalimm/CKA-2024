@@ -19,7 +19,7 @@
 ### Upgrade steps
 
 1) Upgrade master node
-2) Ipgrade worker node
+2) Upgrade worker node
 
 >Note: when master is down, mangement operation are down, pods continue to run
 
@@ -38,10 +38,11 @@ sudo apt-cache madison kubeadm
   
 ```
 sudo apt-mark unhold kubeadm && \
-sudo apt-get update && sudo apt-get install -y kubeadm='1.30.2-1.1' && \
+sudo apt-get update && sudo apt-get install -y kubeadm='x.xx.x-x.x' && \
 sudo apt-mark hold kubeadm
 ```
-
+- `kubeadm version`
+  This command will show you the version of kubeadm
 - `sudo kubeadm upgrade plan`
   This command will show you the version available to be upgraded
   
@@ -61,7 +62,7 @@ kubectl drain <node-to-drain> --ignore-daemonsets
 
 ```
 sudo apt-mark unhold kubelet kubectl && \
-sudo apt-get update && sudo apt-get install -y kubelet='1.30.2-1.1' kubectl='1.30.2-1.1' && \
+sudo apt-get update && sudo apt-get install -y kubelet='x.xx.x-x.x' kubectl='x.xx.x-x.x' && \
 sudo apt-mark hold kubelet kubectl
 ```
 
