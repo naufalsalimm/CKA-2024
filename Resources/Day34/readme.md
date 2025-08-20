@@ -28,7 +28,7 @@
 ```
 echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.30/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
 ```
-# Find the latest 1.31 version in the list.
+# Find the latest version in the list.
 # It should look like 1.31.x-*, where x is the latest patch.
 ```
 sudo apt update
