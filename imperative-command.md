@@ -1,4 +1,4 @@
-# Membuat manifest Kubernetes langsung dari shell
+### Membuat manifest Kubernetes langsung dari shell
 ```bash
 cat << EOF | kubectl apply -f -
 <isi yaml manifest>
@@ -18,7 +18,11 @@ spec:
 EOF
 ```
 
-# Menghilangkan taint di node control-plane
+### Menghilangkan taint di node control-plane
 ``` bash
 kubectl taint nodes --all node-role.kubernetes.io/control-plane-
+```
+### Tes Nslookup 
+``` bash
+kubectl run dnsutils --rm -it --image=busybox:1.28 --restart=Never -- nslookup google.com
 ```
