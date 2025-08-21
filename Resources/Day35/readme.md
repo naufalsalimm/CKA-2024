@@ -14,7 +14,7 @@ export ETCDCTL_API=3
 ```
 ### Search Flags
 ``` bash
-sudo cat /etc/kubernetes/manifest/etcd.yaml
+sudo cat /etc/kubernetes/manifests/etcd.yaml
 ```
 `--listen-client-urls=https://127.0.0.1:2379` <---
 
@@ -25,7 +25,7 @@ sudo cat /etc/kubernetes/manifest/etcd.yaml
 `--key-file=/etc/kubernetes/pki/etcd/server.key` <---
 ### Create Snapshot with Flags
 ``` bash
-sudo etcdctl --endpoints=https://127.0.0.1:2379 \
+sudo ETCDCTL_API=3 etcdctl --endpoints=https://127.0.0.1:2379 \
 --cacert=/etc/kubernetes/pki/etcd/ca.crt \
 --cert=/etc/kubernetes/pki/etcd/server.crt \
 --key=/etc/kubernetes/pki/etcd/server.key \
@@ -39,7 +39,7 @@ du -sh /opt/etcd-backup.db
 
 ### Restore
 ``` bash
-sudo etcdctl --endpoints=https://127.0.0.1:2379 \
+sudo ETCDCTL_API=3 etcdctl --endpoints=https://127.0.0.1:2379 \
 --cacert=/etc/kubernetes/pki/etcd/ca.crt \
 --cert=/etc/kubernetes/pki/etcd/server.crt \
 --key=/etc/kubernetes/pki/etcd/server.key \
@@ -50,11 +50,9 @@ snapshot restore /opt/etcd-backup.db \
 ``` bash
 sudo nano /etc/kubernetes/manifests/etcd.yaml
 ```
-`--data-dir=/var/lib/etcd` to `--data-dir=/var/lib/etcd-restore-from-backup`
-
-`- mountPath: /var/lib/etcd` to `- mountPath: /var/lib/etcd-restore-from-backup`
-
-`path: /var/lib/etcd` to `path: /var/lib/etcd-restore-from-backup` 
+1. `--data-dir=/var/lib/etcd` to `--data-dir=/var/lib/etcd-restore-from-backup`
+2. `- mountPath: /var/lib/etcd` to `- mountPath: /var/lib/etcd-restore-from-backup`
+3. `path: /var/lib/etcd` to `path: /var/lib/etcd-restore-from-backup` 
 ### Restart All Component on Master Node
 ``` bash
 sudo mv /etc/kubernetes/manifests/*.yaml /tmp
