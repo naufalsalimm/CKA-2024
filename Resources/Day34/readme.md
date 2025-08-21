@@ -75,7 +75,12 @@ sudo systemctl restart kubelet
 ```
 kubectl uncordon <node-to-uncordon>
 ```
-
+### Troubleshoot
+```kubectl version```
+> WARNING: version difference between client (1.31) and server (1.33) exceeds the supported minor version skew of +/-1 
+- `nano ~/.bashrc`
+- tambah paling bawah `alias kubectl=/usr/bin/kubectl`
+- `source ~/.bashrc`
 
 ### Run on Worker 
 Follow the same process as above or follow the below doc
