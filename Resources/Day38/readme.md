@@ -1,4 +1,4 @@
-# DDay 38/40 - Troubleshooting control plane failure in Kubernetes
+# Day 38/40 - Troubleshooting control plane failure in Kubernetes
 
 ## Check out the video below for Day38 👇
 
