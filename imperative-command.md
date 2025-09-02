@@ -26,3 +26,11 @@ kubectl taint nodes --all node-role.kubernetes.io/control-plane-
 ``` bash
 kubectl run dnsutils --rm -it --image=busybox:1.28 --restart=Never -- nslookup google.com
 ```
+### Melihat daftar context
+```
+kubectl config get-contexts
+```
+### Mengganti context
+```
+kubectl config use-context <nama-context>
+```
